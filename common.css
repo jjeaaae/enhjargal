@@ -1,0 +1,260 @@
+:root {
+  --primary: #c96f3b;
+  --primary-dark: #9e552a;
+  --secondary: #264653;
+  --background: #f5efe6;
+  --surface: #fffdf9;
+  --surface-strong: #f8f1e8;
+  --surface-soft: #efe5d7;
+  --text: #1f2933;
+  --muted: #6f766f;
+  --border: #dccfbd;
+  --shadow: 0 18px 40px rgba(48, 35, 23, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(201, 111, 59, 0.12), transparent 30%),
+    linear-gradient(180deg, #f3eadf 0%, #fbf7f1 42%, #fffdf9 100%);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(38, 70, 83, 0.94);
+  color: #ffffff;
+  padding: 20px 0;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.eyebrow {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.8;
+  margin-bottom: 6px;
+}
+
+.logo {
+  font-size: 2.3rem;
+  line-height: 1;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1;
+}
+
+.site-nav a {
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  font-weight: 700;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.site-nav a.active,
+.site-nav a:hover {
+  background: rgba(255, 255, 255, 0.16);
+  transform: translateY(-1px);
+}
+
+.site-nav a.auth-link {
+  background: #ffffff;
+  color: var(--secondary);
+  margin-left: 8px;
+  flex-shrink: 0;
+}
+
+.main-content {
+  padding: 34px 0 72px;
+}
+
+.hero,
+.page-section {
+  padding: 18px 0;
+}
+
+.hero h2,
+.auth-copy h2 {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  line-height: 1.05;
+  margin-bottom: 12px;
+}
+
+.section-intro,
+.auth-copy p {
+  max-width: 760px;
+  color: var(--muted);
+}
+
+.panel,
+.recipe-card,
+.info-card,
+.auth-form,
+.role-note,
+.summary-card,
+.hero-note,
+.price-card,
+.role-card,
+.compare-box {
+  background: rgba(255, 253, 249, 0.94);
+  border: 1px solid var(--border);
+  border-radius: 26px;
+  box-shadow: var(--shadow);
+}
+
+.panel,
+.info-card,
+.auth-form,
+.role-note,
+.summary-card,
+.hero-note,
+.price-card,
+.role-card,
+.compare-box {
+  padding: 28px;
+}
+
+.card-tag,
+.role-badge,
+.filter-pill {
+  display: inline-block;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: var(--surface-soft);
+  color: var(--secondary);
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
+.card-button,
+.primary-button,
+.secondary-button,
+.ghost-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 16px;
+  padding: 12px 18px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.card-button,
+.primary-button {
+  background: var(--secondary);
+  color: #ffffff;
+}
+
+.secondary-button,
+.ghost-button {
+  background: #ffffff;
+  color: var(--text);
+  border-color: var(--border);
+}
+
+.card-button:hover,
+.primary-button:hover,
+.secondary-button:hover,
+.ghost-button:hover {
+  transform: translateY(-2px);
+}
+
+label span {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 12px 14px;
+  font: inherit;
+  color: var(--text);
+  background: #ffffff;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid rgba(201, 111, 59, 0.22);
+  outline-offset: 2px;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+@media (max-width: 760px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    font-size: 2rem;
+  }
+
+  .main-content {
+    padding-top: 24px;
+  }
+
+  .panel,
+  .info-card,
+  .auth-form,
+  .role-note,
+  .summary-card,
+  .hero-note,
+  .price-card,
+  .role-card,
+  .compare-box {
+    padding: 22px;
+  }
+}

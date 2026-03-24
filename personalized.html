@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RecipeHub - Хувийн тохиргоотой орц</title>
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="personalized.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div>
+        <p class="eyebrow">Жорын апп</p>
+        <h1 class="logo">RecipeHub</h1>
+      </div>
+      <nav class="site-nav" aria-label="Үндсэн цэс">
+        <a href="index.html">Нүүр хуудас</a>
+        <a href="search.html">Хайх</a>
+        <!-- <a href="detail.html">Жорын дэлгэрэнгүй</a> -->
+        <a href="favorites.html">Хадгалсан</a>
+        <a href="pricing.html">Subscription</a>
+        <a href="add.html">Жор нэмэх</a>
+        <a href="admin.html">Админ</a>
+        <a class="auth-link" href="login.html">Нэвтрэх</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="hero">
+      <div class="container hero-layout">
+        <div>
+          <p class="eyebrow">Хувийн тохиргоотой хайлт</p>
+          <h2>Танд тохирсон хооллолтын мэдээлэл</h2>
+          <p class="section-intro">Энэ хуудас нь хэрэглэгчийн нас, зорилго, харшил, дуртай амт, идэвх хөдөлгөөний хэв маягийг авч дараа нь хувь хүнд таарсан жорын шүүлт үүсгэх бүтэцтэй.</p>
+        </div>
+        <a class="back-link" href="search.html">Ердийн хайлт руу буцах</a>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="container page-grid">
+        <form class="profile-form">
+          <div class="form-section">
+            <h3>Үндсэн мэдээлэл</h3>
+            <div class="field-grid">
+              <label>
+                <span>Нас</span>
+                <input type="number" placeholder="Жишээ: 21">
+              </label>
+              <label>
+                <span>Хүйс</span>
+                <select>
+                  <option>Сонгох</option>
+                  <option>Эрэгтэй</option>
+                  <option>Эмэгтэй</option>
+                  <option>Бусад</option>
+                </select>
+              </label>
+              <label>
+                <span>Өндөр (см)</span>
+                <input type="number" placeholder="170">
+              </label>
+              <label>
+                <span>Жин (кг)</span>
+                <input type="number" placeholder="65">
+              </label>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3>Хооллолтын зорилго</h3>
+            <div class="choice-grid">
+              <label class="choice-card"><input type="radio" name="goal"> Жингээ барих</label>
+              <label class="choice-card"><input type="radio" name="goal"> Жин хасах</label>
+              <label class="choice-card"><input type="radio" name="goal"> Булчин нэмэх</label>
+              <label class="choice-card"><input type="radio" name="goal"> Илүү эрүүл хооллох</label>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3>Эрүүл мэнд ба хязгаарлалт</h3>
+            <div class="field-grid">
+              <label>
+                <span>Харшилтай орц</span>
+                <input type="text" placeholder="Самар, өндөг, сүү">
+              </label>
+              <label>
+                <span>Идэхгүй орц</span>
+                <input type="text" placeholder="Сонгино, мөөг">
+              </label>
+              <label>
+                <span>Илчлэгийн зорилт</span>
+                <input type="number" placeholder="Өдөрт 1800">
+              </label>
+              <label>
+                <span>Хоолны дэглэм</span>
+                <select>
+                  <option>Ердийн</option>
+                  <option>Цагаан хоолтон</option>
+                  <option>Веган</option>
+                  <option>Глютенгүй</option>
+                  <option>Сүүн бүтээгдэхүүнгүй</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3>Амьдралын хэв маяг</h3>
+            <div class="field-grid">
+              <label>
+                <span>Идэвх хөдөлгөөний түвшин</span>
+                <select>
+                  <option>Сууж ажилладаг</option>
+                  <option>Дундаж</option>
+                  <option>Идэвхтэй</option>
+                  <option>Спортлог</option>
+                </select>
+              </label>
+              <label>
+                <span>Өдөрт хэдэн удаа хооллох</span>
+                <select>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              </label>
+              <label>
+                <span>Дуртай улсын хоол</span>
+                <select>
+                  <option>Монгол</option>
+                  <option>Итали</option>
+                  <option>Энэтхэг</option>
+                  <option>Япон</option>
+                  <option>Франц</option>
+                </select>
+              </label>
+              <label>
+                <span>Хоол хийхэд зарцуулах дээд хугацаа</span>
+                <input type="number" placeholder="45 минут">
+              </label>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3>Нэмэлт тэмдэглэл</h3>
+            <label>
+              <span>Танд чухал бусад мэдээлэл</span>
+              <textarea placeholder="Жишээ нь: өглөөний хоол хурдан байх, амтлагч бага хэрэглэх, хүүхдэд тохиромжтой гэх мэт"></textarea>
+            </label>
+          </div>
+
+          <div class="action-row">
+            <button type="button" class="secondary-button">Цэвэрлэх</button>
+            <button type="submit" class="primary-button">Хувийн шүүлт үүсгэх</button>
+          </div>
+        </form>
+
+        <aside class="summary-panel">
+          <div class="summary-card">
+            <p class="summary-label">Энэ хуудас юу хийх вэ?</p>
+            <h3>Танд зориулсан шүүлт үүсгэнэ</h3>
+            <ul class="summary-list">
+              <li>Илчлэгийн хүрээ тооцно</li>
+              <li>Харшилтай орцыг автоматаар хасна</li>
+              <li>Таны зорилгод таарах хоол санал болгоно</li>
+              <li>Дуртай улсын хоолоор санал шүүнэ</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
