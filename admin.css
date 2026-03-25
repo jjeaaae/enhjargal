@@ -1,0 +1,24 @@
+.admin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.panel {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(248, 241, 232, 0.96)),
+    var(--surface);
+}
+
+.panel h3 {
+  margin: 10px 0 16px;
+  font-size: 1.45rem;
+}
+
+.panel p + p {
+  margin-top: 10px;
+}
+
+.card-button {
+  margin-top: 18px;
+}
